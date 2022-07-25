@@ -14,6 +14,7 @@ public class Paddle : MonoBehaviour
     private float mousePos;
     public ProjectileBehaviour ProjectilePrefab;
     public Transform LaunchOffset;
+    public AudioSource bounceSound;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class Paddle : MonoBehaviour
         
         leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         rightBorder = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+
+        bounceSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class Paddle : MonoBehaviour
         {
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
+        
     }
 
     private void movePaddle() 
@@ -53,5 +57,9 @@ public class Paddle : MonoBehaviour
         mousePos = Mathf.Clamp(cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)).x, leftBorder, rightBorder);
         x = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)).x;
         this.transform.position = new Vector3(mousePos, y, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        bounceSound.Play();
     }
 }
