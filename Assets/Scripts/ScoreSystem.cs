@@ -25,7 +25,6 @@ public class ScoreSystem : MonoBehaviour
     public static void addScore(Brick brickk)
     {
         totalScore += brickk.getScoreValue();
-        Debug.Log(totalScore);
     }
 
     private void displayScore()
