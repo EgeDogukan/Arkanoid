@@ -6,7 +6,7 @@ public class ProjectileBehaviour : MonoBehaviour
 {
 
     public float projectileSpeed = 150f;
-    public float forceApplied = 150f;
+    public float forceApplied = 300f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Bricks"))
         {
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, forceApplied, 0));
+            other.rigidbody.velocity = -other.rigidbody.velocity;
         }
         Destroy(gameObject);
     }

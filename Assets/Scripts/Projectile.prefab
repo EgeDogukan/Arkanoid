@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430828174505697313}
-  - component: {fileID: 373853490633257118}
+  - component: {fileID: 1973825263509786629}
   - component: {fileID: 5766433948744591958}
   - component: {fileID: 1301948144580169634}
   m_Layer: 8
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &373853490633257118
+--- !u!70 &1973825263509786629
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,8 +48,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.115609095, y: 0.15941882}
-  m_Size: {x: 0.40507886, y: 0.7444434}
+  m_Offset: {x: -0.08337656, y: 0.15571797}
+  m_Size: {x: 0.48063427, y: 0.78022695}
   m_Direction: 0
 --- !u!50 &5766433948744591958
 Rigidbody2D:
@@ -65,7 +65,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.005
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -111,8 +111,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7107652239743228949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1149, y: 0.1585, z: 0}
-  m_LocalScale: {x: 2.1108108, y: 1.7731549, z: 1}
+  m_LocalPosition: {x: -0.0827, y: 0.1585, z: 0}
+  m_LocalScale: {x: 2.4489546, y: 1.7731549, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 430828174505697313}
