@@ -7,11 +7,12 @@ public class ProjectileBehaviour : MonoBehaviour
 
     public float projectileSpeed = 150f;
     public float forceApplied = 300f;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,9 +23,10 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.gameObject.CompareTag("Bricks"))
+        if(other.gameObject.CompareTag("Ball"))
         {
-            other.rigidbody.velocity = -other.rigidbody.velocity;
+            audioSource.Play();
+            other.rigidbody.velocity += -other.rigidbody.velocity;
         }
         Destroy(gameObject);
     }
