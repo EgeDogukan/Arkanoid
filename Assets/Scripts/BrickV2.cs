@@ -21,5 +21,6 @@ public class BrickV2 : Brick
     {
         this.hitPoints = 2;
         this.scoreValue = 200;
+        this.audioSource = GetComponentInParent<AudioSource>();
     }
 }

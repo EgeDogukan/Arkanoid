@@ -60,6 +60,6 @@ public class Paddle : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        bounceSound.Play();
+        bounceSound.PlayOneShot(bounceSound.clip);
     }
 }

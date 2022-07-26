@@ -7,15 +7,12 @@ public class Brick : MonoBehaviour
 
     protected int hitPoints = 1;
     public int scoreValue = 100;
-    protected AudioClip brickBounce;
     protected AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        brickBounce = GetComponent<AudioSource>().clip;
-        
+        audioSource = GetComponentInParent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,7 +23,7 @@ public class Brick : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D other) 
     {
-        audioSource.PlayOneShot(brickBounce);
+        audioSource.PlayOneShot(audioSource.clip, 0.5f);
         coll();
     }
 
