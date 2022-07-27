@@ -31,4 +31,9 @@ public class ScoreSystem : MonoBehaviour
     {
         textBox.text = "Score: " + totalScore.ToString("F0");
     }
+
+    public static int getScore()
+    {
+        return totalScore;
+    }
 }

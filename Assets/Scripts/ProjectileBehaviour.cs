@@ -25,7 +25,6 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Ball"))
         {
-            audioSource.Play();
             other.rigidbody.velocity += -other.rigidbody.velocity;
         }
         Destroy(gameObject);
