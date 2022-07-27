@@ -59,7 +59,8 @@ public class Paddle : MonoBehaviour
         this.transform.position = new Vector3(mousePos, y, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
         bounceSound.PlayOneShot(bounceSound.clip);
     }
 }
