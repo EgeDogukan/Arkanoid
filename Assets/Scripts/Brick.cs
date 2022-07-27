@@ -8,11 +8,14 @@ public class Brick : MonoBehaviour
     protected int hitPoints = 1;
     public int scoreValue = 100;
     protected AudioSource audioSource;
+    public Sprite newSprite;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponentInParent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -35,14 +38,19 @@ public class Brick : MonoBehaviour
             ScoreSystem.addScore(this);
             Destroy(this.gameObject);
         } 
-        else 
+        else if(this.hitPoints == 1)
         {
-            // change the visual of the brick with a more damaged one
+            changeSprite();
         }
     }
 
     public int getScoreValue()
     {
         return this.scoreValue;
+    }
+
+    protected void changeSprite()
+    {
+        spriteRenderer.sprite = newSprite;
     }
 }

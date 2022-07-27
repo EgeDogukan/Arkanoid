@@ -15,6 +15,7 @@ public class BrickV3 : Brick
         soundss = GetComponentsInParent<AudioSource>();
         sound1 = soundss[0];
         sound2 = soundss[1];
+        this.spriteRenderer = GetComponent<SpriteRenderer>();
         loadData();
     }
 
@@ -28,7 +29,6 @@ public class BrickV3 : Brick
     {
         this.hitPoints = 3;
         this.scoreValue = 300;
-        this.audioSource = GetComponentInParent<AudioSource>();
     }
 
     new private void OnCollisionEnter2D(Collision2D other) 

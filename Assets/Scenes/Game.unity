@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &82715325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -388,6 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -516,6 +520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -644,6 +650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -772,6 +780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -971,6 +981,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -1099,6 +1111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &340090698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1224,6 +1238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &347725716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1349,6 +1365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &383362582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1474,6 +1492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &427334598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1599,6 +1619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &462457588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1724,6 +1746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &463578707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1933,6 +1957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &525006164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2058,6 +2084,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -2186,6 +2214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -2314,6 +2344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &622881495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2607,6 +2639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -2960,6 +2994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -3088,6 +3124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -3216,6 +3254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -3344,6 +3384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &837036314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3500,6 +3542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &916704833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3693,6 +3737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &995611366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3896,6 +3942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1019195855
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,6 +3991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1019195858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4139,6 +4189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -4267,6 +4319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1120554948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4392,6 +4446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -4520,6 +4576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -4648,6 +4706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1208792561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4773,6 +4833,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -4901,6 +4963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -5029,6 +5093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1248689137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5154,6 +5220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1264541908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5279,6 +5347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -5407,6 +5477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -5535,6 +5607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -5663,6 +5737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -5791,6 +5867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1313122438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5916,6 +5994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1316705661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6240,7 +6320,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376733246}
-  - component: {fileID: 1376733243}
   - component: {fileID: 1376733247}
   m_Layer: 0
   m_Name: Bricks
@@ -6249,19 +6328,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1376733243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376733242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d726ab963ded83b40a0ae80dd8602d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValue: 100
 --- !u!4 &1376733246
 Transform:
   m_ObjectHideFlags: 0
@@ -6423,6 +6489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -6551,6 +6619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1515277605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6676,6 +6746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -6804,6 +6876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1592864996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6929,6 +7003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -7189,6 +7265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -7418,6 +7496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: eb39ef49304b30648bfbde37f1637209, type: 3}
+  spriteRenderer: {fileID: 0}
   soundss: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -7617,6 +7697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -7745,6 +7827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1824382656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8076,6 +8160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -8204,6 +8290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -8575,6 +8663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -8703,6 +8793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &1969255036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8828,6 +8920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 21300000, guid: 5709ae6cd89d49741983e03b6d4838bc, type: 3}
+  spriteRenderer: {fileID: 0}
   sounds: []
   sound1: {fileID: 0}
   sound2: {fileID: 0}
@@ -8956,6 +9050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &2058905183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9165,6 +9261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 100
+  newSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!61 &2115926281
 BoxCollider2D:
   m_ObjectHideFlags: 0
