@@ -9,6 +9,8 @@ public class BallMove : MonoBehaviour
 
     private Rigidbody2D rigidBody;
 
+    int seconds = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +25,28 @@ public class BallMove : MonoBehaviour
         }
 
         rigidBody = GetComponent<Rigidbody2D>();
-        rigidBody.AddForce(new Vector3(9.8f * UnityEngine.Random.Range(20f,40f) * randVal, 9.8f * 25f, 0));
+        rigidBody.AddForce(new Vector3(9.8f * 20f * randVal, 9.8f * 25f, 0));
+        StartCoroutine(timer());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator timer()
+    {
+        while(true)
+        {
+            secondsCount();
+            ScoreSystem.addScoreTime(seconds / 5);
+            yield return new WaitForSecondsRealtime(3);
+        }
+    }
+
+    void secondsCount()
+    {
+        seconds++;
     }
 }

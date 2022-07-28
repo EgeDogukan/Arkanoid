@@ -26,6 +26,10 @@ public class ScoreSystem : MonoBehaviour
     {
         totalScore += brickk.getScoreValue();
     }
+    public static void addScoreTime(int value)
+    {
+        totalScore += value;
+    }
 
     private void displayScore()
     {
