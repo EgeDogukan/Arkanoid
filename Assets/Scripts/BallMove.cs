@@ -41,12 +41,43 @@ public class BallMove : MonoBehaviour
         {
             secondsCount();
             ScoreSystem.addScoreTime(seconds / 5);
+            if(seconds % 5 == 0)
+            {
+                increaseSpeed();
+            }
             yield return new WaitForSecondsRealtime(3);
         }
     }
 
-    void secondsCount()
+    private void secondsCount()
     {
         seconds++;
+    }
+
+    private void increaseSpeed()
+    {
+       // rigidBody.AddForce(new Vector3(10f, 10f, 0f), ForceMode2D.Impulse);
+       if(rigidBody.velocity.y >= 0)
+       {
+            if(rigidBody.velocity.x >= 0)
+            {
+                rigidBody.velocity += new Vector2(0.4f, 0.4f);
+            }
+            else if(rigidBody.velocity.x < 0)
+            {
+                rigidBody.velocity += new Vector2(-0.4f, 0.4f);
+            }
+       }
+       else if(rigidBody.velocity.y < 0)
+       {
+            if(rigidBody.velocity.x >= 0)
+            {
+                rigidBody.velocity += new Vector2(0.4f, -0.4f);
+            }
+            else if(rigidBody.velocity.x < 0)
+            {
+                rigidBody.velocity += new Vector2(-0.4f, -0.4f);
+            }
+       } 
     }
 }
