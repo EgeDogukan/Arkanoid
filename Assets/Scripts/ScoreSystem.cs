@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreSystem : MonoBehaviour
 {
 
     public static int totalScore = 0;
-    private Text textBox;
+    public TextMeshProUGUI textBox;
 
     // Start is called before the first frame update
     void Start()
     {
-        textBox = GetComponent<Text>();
+        totalScore = 0;
+        textBox = GetComponent<TextMeshProUGUI>();
         displayScore();
     }
 
@@ -35,7 +37,7 @@ public class ScoreSystem : MonoBehaviour
     {
         textBox.text = "Score: " + totalScore.ToString("F0");
     }
-
+    
     public static int getScore()
     {
         return totalScore;

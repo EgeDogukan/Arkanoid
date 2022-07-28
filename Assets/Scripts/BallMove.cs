@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,7 @@ public class BallMove : MonoBehaviour
     private Rigidbody2D rigidBody;
 
     int seconds = 0;
+    static float displayTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,14 @@ public class BallMove : MonoBehaviour
 
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.AddForce(new Vector3(9.8f * 20f * randVal, 9.8f * 25f, 0));
+        displayTimer = 0;
         StartCoroutine(timer());
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        displayTimer += Time.deltaTime;
     }
 
     IEnumerator timer()
@@ -61,23 +63,28 @@ public class BallMove : MonoBehaviour
        {
             if(rigidBody.velocity.x >= 0)
             {
-                rigidBody.velocity += new Vector2(0.4f, 0.4f);
+                rigidBody.velocity += new Vector2(0.5f, 0.5f);
             }
             else if(rigidBody.velocity.x < 0)
             {
-                rigidBody.velocity += new Vector2(-0.4f, 0.4f);
+                rigidBody.velocity += new Vector2(-0.5f, 0.5f);
             }
        }
        else if(rigidBody.velocity.y < 0)
        {
             if(rigidBody.velocity.x >= 0)
             {
-                rigidBody.velocity += new Vector2(0.4f, -0.4f);
+                rigidBody.velocity += new Vector2(0.5f, -0.5f);
             }
             else if(rigidBody.velocity.x < 0)
             {
-                rigidBody.velocity += new Vector2(-0.4f, -0.4f);
+                rigidBody.velocity += new Vector2(-0.5f, -0.5f);
             }
        } 
+    }
+
+    static public float getDisplayTime()
+    {
+        return displayTimer;
     }
 }
