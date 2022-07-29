@@ -10,6 +10,7 @@ public class Brick : MonoBehaviour
     protected AudioSource audioSource;
     public Sprite newSprite;
     public SpriteRenderer spriteRenderer;
+    public ParticleSystem particles;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class Brick : MonoBehaviour
         if(this.hitPoints <= 0) 
         {
             ScoreSystem.addScore(this);
+            brickDestroyEffect();
             Destroy(this.gameObject);
         } 
         else if(this.hitPoints == 1)
@@ -52,5 +54,11 @@ public class Brick : MonoBehaviour
     protected void changeSprite()
     {
         spriteRenderer.sprite = newSprite;
+    }
+
+    protected void brickDestroyEffect()
+    {
+        Vector3 effectPos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        Instantiate(particles.gameObject, effectPos, Quaternion.identity);
     }
 }

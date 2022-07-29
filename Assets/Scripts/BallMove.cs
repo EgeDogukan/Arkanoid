@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,7 @@ public class BallMove : MonoBehaviour
 
     int seconds = 0;
     static float displayTimer = 0;
+    public ParticleSystem particles;
 
     // Start is called before the first frame update
     void Start()
