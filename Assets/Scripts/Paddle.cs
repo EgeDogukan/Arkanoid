@@ -15,6 +15,10 @@ public class Paddle : MonoBehaviour
     public ProjectileBehaviour ProjectilePrefab;
     public Transform LaunchOffset;
     public AudioSource bounceSound;
+    private Vector3 originalPos;
+    const float shakeCoefficient = 0.5f;
+    private int shakeNum;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +40,6 @@ public class Paddle : MonoBehaviour
         {
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
-        
     }
 
     private void movePaddle() 
@@ -61,6 +64,24 @@ public class Paddle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        bounceSound.PlayOneShot(bounceSound.clip);
+        bounceSound.PlayOneShot(bounceSound.clip);    
+        StartCoroutine(Shake());
+    }
+
+    IEnumerator Shake() 
+    {
+        this.GetComponent<Collider2D>().enabled = false;
+            for ( int i = 0; i < 5; i++)
+           {
+                transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 300, BallMove.GetRigidbody2Dy() / 300, 0);
+                yield return new WaitForSeconds(0.01f);
+                transform.localPosition -= new Vector3(BallMove.GetRigidbody2Dx() / 300, BallMove.GetRigidbody2Dy() / 300, 0);
+                yield return new WaitForSeconds(0.01f);
+                transform.localPosition += new Vector3(-BallMove.GetRigidbody2Dx() / 300, -BallMove.GetRigidbody2Dy() / 300, 0);
+                yield return new WaitForSeconds(0.01f);
+                transform.localPosition -= new Vector3(-BallMove.GetRigidbody2Dx() / 300, -BallMove.GetRigidbody2Dy() / 300, 0);
+                yield return new WaitForSeconds(0.01f);
+           }
+        this.GetComponent<Collider2D>().enabled = true;
     }
 }

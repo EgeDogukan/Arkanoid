@@ -6,9 +6,7 @@ public class BallMove : MonoBehaviour
 {
 
     private float randVal;
-
-    private Rigidbody2D rigidBody;
-
+    private static Rigidbody2D rigidBody;
     int seconds = 0;
     static float displayTimer = 0;
     public ParticleSystem particles;
@@ -59,7 +57,6 @@ public class BallMove : MonoBehaviour
 
     private void increaseSpeed()
     {
-       // rigidBody.AddForce(new Vector3(10f, 10f, 0f), ForceMode2D.Impulse);
        if(rigidBody.velocity.y >= 0)
        {
             if(rigidBody.velocity.x >= 0)
@@ -87,5 +84,15 @@ public class BallMove : MonoBehaviour
     static public float getDisplayTime()
     {
         return displayTimer;
+    }
+
+    public static float GetRigidbody2Dy()
+    {
+        return rigidBody.velocity.y;
+    }
+
+    public static float GetRigidbody2Dx()
+    {
+        return rigidBody.velocity.x;
     }
 }
