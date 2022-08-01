@@ -15,10 +15,6 @@ public class Paddle : MonoBehaviour
     public ProjectileBehaviour ProjectilePrefab;
     public Transform LaunchOffset;
     public AudioSource bounceSound;
-    private Vector3 originalPos;
-    const float shakeCoefficient = 0.5f;
-    private int shakeNum;
-    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
