@@ -67,7 +67,7 @@ public class Paddle : MonoBehaviour
     IEnumerator Shake() 
     {
         this.GetComponent<Collider2D>().enabled = false;
-            for ( int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
            {
                 transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 300, BallMove.GetRigidbody2Dy() / 300, 0);
                 yield return new WaitForSeconds(0.01f);

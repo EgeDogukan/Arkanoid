@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Brick : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Brick : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public ParticleSystem particles;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +24,13 @@ public class Brick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     protected void OnCollisionEnter2D(Collision2D other) 
     {
         audioSource.PlayOneShot(audioSource.clip, 0.5f);
+        CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
         coll();
     }
 
@@ -37,7 +40,6 @@ public class Brick : MonoBehaviour
         if(this.hitPoints <= 0) 
         {
             ScoreSystem.addScore(this);
-            brickDestroyEffect();
             Destroy(this.gameObject);
         } 
         else if(this.hitPoints == 1)

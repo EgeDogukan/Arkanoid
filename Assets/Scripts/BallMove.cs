@@ -95,4 +95,9 @@ public class BallMove : MonoBehaviour
     {
         return rigidBody.velocity.x;
     }
+
+    public static float GetRigidbody2DVel()
+    {
+        return Mathf.Sqrt((rigidBody.velocity.x * rigidBody.velocity.x) + (rigidBody.velocity.y * rigidBody.velocity.y));
+    }
 }
