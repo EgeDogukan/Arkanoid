@@ -8,18 +8,21 @@ public class GameOverMenu : MonoBehaviour
 {
 
     TextMeshProUGUI textScore;
-    TextMeshProUGUI texthighScore;
     TextMeshProUGUI time;
+    TextMeshProUGUI texthighScore;
+    TextMeshProUGUI bestTime;
 
     // Start is called before the first frame update
     void Start()
     {
         textScore = GetComponentInChildren<TextMeshProUGUI>();
         texthighScore = transform.Find("HighScore").GetComponent<TextMeshProUGUI>();
+        bestTime = transform.Find("BestTime").GetComponent<TextMeshProUGUI>();
         time = transform.Find("Time").GetComponent<TextMeshProUGUI>();
         displayScore();
-        displayhighScore();
         displayTime();
+        displayhighScore();
+        displaybestTime();
     }
 
     // Update is called once per frame
@@ -43,13 +46,18 @@ public class GameOverMenu : MonoBehaviour
         textScore.text = "Score: " + ScoreSystem.getScore().ToString("F0");
     }
 
+private void displayTime()
+    {
+        time.text = "Time: " + BallMove.getDisplayTime().ToString("F0");
+    }
+
     private void displayhighScore()
     {
         texthighScore.text = "High Score: " + ScoreSystem.gethighScore().ToString("F0");
     }
 
-    private void displayTime()
+    private void displaybestTime()
     {
-        time.text = "Time: " + BallMove.getDisplayTime().ToString("F0");
+        bestTime.text = "Best Time: " + ScoreSystem.getbestTime().ToString("F0");
     }
 }

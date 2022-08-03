@@ -9,6 +9,7 @@ public class ScoreSystem : MonoBehaviour
 
     public static int totalScore = 0;
     public static TextMeshProUGUI highScore;
+    public static TextMeshProUGUI bestTime;
     public TextMeshProUGUI textBox;
 
     // Start is called before the first frame update
@@ -45,11 +46,20 @@ public class ScoreSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("highScore", totalScore);
         }
+        if(BallMove.getDisplayTime() > PlayerPrefs.GetFloat("bestTime", 0))
+        {
+            PlayerPrefs.SetFloat("bestTime", (BallMove.getDisplayTime()));
+        }
         return totalScore;
     }
 
     public static int gethighScore()
     {
         return PlayerPrefs.GetInt("highScore", 0);
+    }
+
+    public static float getbestTime()
+    {
+        return PlayerPrefs.GetFloat("bestTime", 0);
     }
 }
