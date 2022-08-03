@@ -8,14 +8,17 @@ public class GameOverMenu : MonoBehaviour
 {
 
     TextMeshProUGUI textScore;
+    TextMeshProUGUI texthighScore;
     TextMeshProUGUI time;
 
     // Start is called before the first frame update
     void Start()
     {
         textScore = GetComponentInChildren<TextMeshProUGUI>();
+        texthighScore = transform.Find("HighScore").GetComponent<TextMeshProUGUI>();
         time = transform.Find("Time").GetComponent<TextMeshProUGUI>();
         displayScore();
+        displayhighScore();
         displayTime();
     }
 
@@ -38,6 +41,11 @@ public class GameOverMenu : MonoBehaviour
     private void displayScore()
     {
         textScore.text = "Score: " + ScoreSystem.getScore().ToString("F0");
+    }
+
+    private void displayhighScore()
+    {
+        texthighScore.text = "High Score: " + ScoreSystem.gethighScore().ToString("F0");
     }
 
     private void displayTime()

@@ -8,6 +8,7 @@ public class ScoreSystem : MonoBehaviour
 {
 
     public static int totalScore = 0;
+    public static TextMeshProUGUI highScore;
     public TextMeshProUGUI textBox;
 
     // Start is called before the first frame update
@@ -40,6 +41,15 @@ public class ScoreSystem : MonoBehaviour
     
     public static int getScore()
     {
+        if(totalScore > PlayerPrefs.GetInt("highScore", 0))
+        {
+            PlayerPrefs.SetInt("highScore", totalScore);
+        }
         return totalScore;
+    }
+
+    public static int gethighScore()
+    {
+        return PlayerPrefs.GetInt("highScore", 0);
     }
 }
