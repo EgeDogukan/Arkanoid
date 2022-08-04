@@ -38,11 +38,11 @@ public class BrickV2 : Brick
         if(this.hitPoints > 1)
         {
             sound2.PlayOneShot(sound2.clip, 0.5f);
-            CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
         }
         else
         {
             sound1.PlayOneShot(sound1.clip, 0.5f);
+            CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
         }
         base.coll();
     }

@@ -30,7 +30,6 @@ public class Brick : MonoBehaviour
     protected void OnCollisionEnter2D(Collision2D other) 
     {
         audioSource.PlayOneShot(audioSource.clip, 0.5f);
-        CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
         coll();
     }
 
@@ -40,6 +39,7 @@ public class Brick : MonoBehaviour
         if(this.hitPoints <= 0) 
         {
             ScoreSystem.addScore(this);
+            CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
             Destroy(this.gameObject);
         } 
         else if(this.hitPoints == 1)
