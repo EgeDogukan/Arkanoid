@@ -26,6 +26,6 @@ public class GameOver : MonoBehaviour
     {
         audioSource.PlayOneShot(audioSource.clip, 0.5f);
         yield return new WaitForSeconds(2.8f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);    
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

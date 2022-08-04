@@ -9,8 +9,10 @@ public class Paddle : MonoBehaviour
     private Camera cam;
     private float x;
     private float y;
-    private float leftBorder;
-    private float rightBorder;
+    public static float leftBorder;
+    public static float rightBorder;
+    public static float upperBorder;
+    public static float lowerBorder;
     private float mousePos;
     public ProjectileBehaviour ProjectilePrefab;
     public Transform LaunchOffset;
@@ -22,8 +24,12 @@ public class Paddle : MonoBehaviour
         y = this.transform.position.y;
         cam = FindObjectOfType<Camera>();
         
-        leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        leftBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         rightBorder = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+        upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
+        lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
+        Debug.Log(lowerBorder);
+        Debug.Log(upperBorder);
 
         bounceSound = GetComponent<AudioSource>();
     }
@@ -58,13 +64,13 @@ public class Paddle : MonoBehaviour
         this.transform.position = new Vector3(mousePos, y, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionEnter2D(Collision2D other) //Collision
     {
         bounceSound.PlayOneShot(bounceSound.clip);    
         StartCoroutine(Shake());
     }
 
-    IEnumerator Shake() 
+    IEnumerator Shake()                 //Paddle Shake
     {
         this.GetComponent<Collider2D>().enabled = false;
             for (int i = 0; i < 5; i++)
