@@ -10,6 +10,7 @@ public class BallMove : MonoBehaviour
     int seconds = 0;
     static float displayTimer = 0;
     public ParticleSystem particles;
+    public PickUps pickUps;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,19 @@ public class BallMove : MonoBehaviour
             if(seconds % 5 == 0)
             {
                 increaseSpeed();
+                //GameObject obj = new GameObject();
+                Instantiate(pickUps);
+                pickUps.setPaddleCollider(FindObjectOfType<Paddle>().GetComponent<BoxCollider2D>());
+                pickUps.setPaddleSpriteRend(FindObjectOfType<Paddle>().GetComponent<SpriteRenderer>());
+                float[] spawnSet = pickUps.spawnPickUp();
+                pickUps.setPos(spawnSet);
+
+                /*pickUp = obj.GetComponent<PickUps>();
+                pickUp.setPaddleCollider(FindObjectOfType<Paddle>().GetComponent<BoxCollider2D>());
+                pickUp.setPaddleSpriteRend(FindObjectOfType<Paddle>().GetComponent<SpriteRenderer>());
+                float[] spawnSet = pickUp.spawnPickUp();
+                pickUp.transform.position = new Vector3(spawnSet[0], spawnSet[1], spawnSet[2]);*/
+                //Instantiate(pickUp, new Vector3(spawnSet[0], spawnSet[1], spawnSet[2]), Quaternion.identity);
             }
             yield return new WaitForSecondsRealtime(3);
         }
@@ -98,6 +112,8 @@ public class BallMove : MonoBehaviour
 
     public static float GetRigidbody2DVel()
     {
-        return Mathf.Sqrt((rigidBody.velocity.x * rigidBody.velocity.x) + (rigidBody.velocity.y * rigidBody.velocity.y));
+        return Mathf.Sqrt(Mathf.Abs(rigidBody.velocity.x * rigidBody.velocity.x) + Mathf.Abs(rigidBody.velocity.y * rigidBody.velocity.y));
     }
+
+    
 }

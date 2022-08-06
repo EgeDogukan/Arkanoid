@@ -12,45 +12,73 @@ public class PickUps : MonoBehaviour
     private BoxCollider2D paddleCollider;
     private SpriteRenderer paddleSpriteRend;
 
-    public PickUps(Vector3 pickUpLocation, BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
+    public PickUps(BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
     {
-        this.pickUpLocation = pickUpLocation;
-        this.transform.position = this.pickUpLocation;
         this.paddleCollider = paddleCollider;
         this.paddleSpriteRend = paddleSpriteRend;
     }
 
-    private void spawnPickUp()
+    public PickUps()
+    {
+
+    }
+
+    public float[] spawnPickUp()
     {
         int randSelect = Random.Range(1, 4);
         if(randSelect == 1)
         {
-            spawnX = Random.Range(Paddle.leftBorder, Paddle.leftBorder + 4.8f);
-            spawnY = Random.Range(Paddle.lowerBorder + 0.2f, Paddle.upperBorder - 0.2f);
+            spawnX = Random.Range(Paddle.leftBorder + 1f, Paddle.leftBorder + 4.8f);
+            spawnY = Random.Range(Paddle.lowerBorder - 1f, Paddle.upperBorder + 1f);
             this.transform.position = new Vector3(spawnX, spawnY, 0);
         }
         else if(randSelect == 2)
         {
-            spawnX = Random.Range(Paddle.rightBorder, Paddle.rightBorder - 4.2f);
-            spawnY = Random.Range(Paddle.lowerBorder + 0.2f, Paddle.upperBorder - 0.2f);
+            spawnX = Random.Range(Paddle.rightBorder - 1f, Paddle.rightBorder - 4.8f);
+            spawnY = Random.Range(Paddle.lowerBorder - 1f, Paddle.upperBorder + 1f);
             this.transform.position = new Vector3(spawnX, spawnY, 0);
         }
         else if(randSelect == 3)
         {
             spawnX = Random.Range(Paddle.leftBorder, Paddle.rightBorder);
-            spawnY = Random.Range(Paddle.lowerBorder + 0.2f, Paddle.lowerBorder + 3.8f);
+            spawnY = Random.Range(Paddle.lowerBorder + 1f, Paddle.lowerBorder + 3f);
         }
         else if(randSelect == 4)
         {
             spawnX = Random.Range(Paddle.leftBorder, Paddle.rightBorder);
-            spawnY = Random.Range(Paddle.upperBorder - 3.8f, Paddle.upperBorder - 0.2f);
+            spawnY = Random.Range(Paddle.upperBorder - 3f, Paddle.upperBorder - 1f);
         }
+        Debug.Log(Paddle.upperBorder);
+        Debug.Log(Paddle.lowerBorder);
+        Debug.Log(Paddle.rightBorder);
+        Debug.Log(Paddle.leftBorder);
+        float[] toReturn = {spawnX, spawnY, 0};
+        return toReturn;
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        spawnPickUp();
         new PaddleGrow(pickupType, paddleCollider, paddleSpriteRend);  
         Destroy(this.gameObject);  
+    }
+
+    public void setPaddleCollider(BoxCollider2D paddleCollider)
+    {
+        this.paddleCollider = paddleCollider;
+    }
+
+    public void setPaddleSpriteRend(SpriteRenderer paddleSpriteRend)
+    {
+        Debug.Log(this.transform.position);
+        //this.spriteRenderer = GetComponent<SpriteRenderer>();
+        this.paddleSpriteRend = paddleSpriteRend;
+        //float[] spawnRet = spawnPickUp();
+        //this.transform.position = new Vector3(spawnRet[0], spawnRet[1], spawnRet[2]);
+        //Debug.Log(spriteRenderer.isVisible);
+
+    }
+    public void setPos(float[] floats)
+    {
+        this.transform.position = new Vector3(floats[0], floats[1], floats[2]);
     }
 }
