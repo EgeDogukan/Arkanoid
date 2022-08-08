@@ -12,7 +12,6 @@ public class ScoreSystem : MonoBehaviour
     public static TextMeshProUGUI bestTime;
     public TextMeshProUGUI textBox;
 
-    // Start is called before the first frame update
     void Start()
     {
         totalScore = 0;
@@ -20,7 +19,6 @@ public class ScoreSystem : MonoBehaviour
         displayScore();
     }
 
-    // Update is called once per frame
     void Update()
     {
         displayScore();

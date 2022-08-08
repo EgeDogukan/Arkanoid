@@ -10,4 +10,9 @@ public class PowerUps : MonoBehaviour
     {
         this.powerUpType = powerUpType;
     }
+
+    public void setType(int i)
+    {
+        this.powerUpType = i;
+    }
 }

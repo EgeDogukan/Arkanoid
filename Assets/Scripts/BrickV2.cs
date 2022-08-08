@@ -11,7 +11,6 @@ public class BrickV2 : Brick
     public AudioSource sound1;
     public AudioSource sound2;
     
-    // Start is called before the first frame update
     void Start()
     {
         sounds = GetComponentsInParent<AudioSource>();
@@ -19,12 +18,6 @@ public class BrickV2 : Brick
         sound2 = sounds[1];
         this.spriteRenderer = GetComponent<SpriteRenderer>();
         loadData();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void loadData()

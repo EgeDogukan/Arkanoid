@@ -10,19 +10,12 @@ public class MainMenu : MonoBehaviour
     private TextMeshProUGUI texthighScore;
     private TextMeshProUGUI bestTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         texthighScore = transform.Find("HighScore").GetComponent<TextMeshProUGUI>();
         bestTime = transform.Find("BestTime").GetComponent<TextMeshProUGUI>();
         displayhighScore();
         displaybestTime();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void playGame()

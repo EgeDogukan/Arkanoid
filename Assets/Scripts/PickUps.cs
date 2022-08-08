@@ -48,10 +48,6 @@ public class PickUps : MonoBehaviour
             spawnX = Random.Range(Paddle.leftBorder, Paddle.rightBorder);
             spawnY = Random.Range(Paddle.upperBorder - 3f, Paddle.upperBorder - 1f);
         }
-        Debug.Log(Paddle.upperBorder);
-        Debug.Log(Paddle.lowerBorder);
-        Debug.Log(Paddle.rightBorder);
-        Debug.Log(Paddle.leftBorder);
         float[] toReturn = {spawnX, spawnY, 0};
         return toReturn;
     }
@@ -69,14 +65,9 @@ public class PickUps : MonoBehaviour
 
     public void setPaddleSpriteRend(SpriteRenderer paddleSpriteRend)
     {
-        Debug.Log(this.transform.position);
-        //this.spriteRenderer = GetComponent<SpriteRenderer>();
         this.paddleSpriteRend = paddleSpriteRend;
-        //float[] spawnRet = spawnPickUp();
-        //this.transform.position = new Vector3(spawnRet[0], spawnRet[1], spawnRet[2]);
-        //Debug.Log(spriteRenderer.isVisible);
-
     }
+
     public void setPos(float[] floats)
     {
         this.transform.position = new Vector3(floats[0], floats[1], floats[2]);
