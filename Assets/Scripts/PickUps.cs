@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class PickUps : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class PickUps : MonoBehaviour
     private float spawnX;
     private BoxCollider2D paddleCollider;
     private SpriteRenderer paddleSpriteRend;
+    public PowerUps powerUps;
+
+    private void Start() 
+    {
+    }
 
     public PickUps(BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
     {
@@ -28,25 +34,25 @@ public class PickUps : MonoBehaviour
         int randSelect = Random.Range(1, 4);
         if(randSelect == 1)
         {
-            spawnX = Random.Range(Paddle.leftBorder + 1f, Paddle.leftBorder + 4.8f);
-            spawnY = Random.Range(Paddle.lowerBorder - 1f, Paddle.upperBorder + 1f);
+            spawnX = Random.Range(Paddle.leftBorder + 2f, Paddle.leftBorder + 4f);
+            spawnY = Random.Range(Paddle.lowerBorder + 3f, Paddle.upperBorder - 2f);
             this.transform.position = new Vector3(spawnX, spawnY, 0);
         }
         else if(randSelect == 2)
         {
-            spawnX = Random.Range(Paddle.rightBorder - 1f, Paddle.rightBorder - 4.8f);
-            spawnY = Random.Range(Paddle.lowerBorder - 1f, Paddle.upperBorder + 1f);
+            spawnX = Random.Range(Paddle.rightBorder - 4f, Paddle.rightBorder - 2f);
+            spawnY = Random.Range(Paddle.lowerBorder + 3f, Paddle.upperBorder - 2f);
             this.transform.position = new Vector3(spawnX, spawnY, 0);
         }
         else if(randSelect == 3)
         {
-            spawnX = Random.Range(Paddle.leftBorder, Paddle.rightBorder);
-            spawnY = Random.Range(Paddle.lowerBorder + 1f, Paddle.lowerBorder + 3f);
+            spawnX = Random.Range(Paddle.leftBorder + 2f, Paddle.rightBorder - 2f);
+            spawnY = Random.Range(Paddle.lowerBorder + 2f, Paddle.lowerBorder + 3f);
         }
         else if(randSelect == 4)
         {
-            spawnX = Random.Range(Paddle.leftBorder, Paddle.rightBorder);
-            spawnY = Random.Range(Paddle.upperBorder - 3f, Paddle.upperBorder - 1f);
+            spawnX = Random.Range(Paddle.leftBorder + 2f, Paddle.rightBorder - 2f);
+            spawnY = Random.Range(Paddle.upperBorder - 3f, Paddle.upperBorder - 2f);
         }
         float[] toReturn = {spawnX, spawnY, 0};
         return toReturn;
@@ -54,7 +60,9 @@ public class PickUps : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        new PaddleGrow(pickupType, paddleCollider, paddleSpriteRend);  
+        //PrefabUtility.InstantiatePrefab(paddleGrow);
+        Instantiate(powerUps);
+        PaddleGrow paddlegr  = powerUps.instantiatePaddleGrow(powerUps.getType(), this.paddleCollider, this.paddleSpriteRend);
         Destroy(this.gameObject);  
     }
 

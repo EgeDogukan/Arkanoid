@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerUps : MonoBehaviour
 {
     protected int powerUpType;
+    public PaddleGrow paddleGrow;
 
     public PowerUps(int powerUpType)
     {
@@ -14,5 +15,19 @@ public class PowerUps : MonoBehaviour
     public void setType(int i)
     {
         this.powerUpType = i;
+    }
+
+    public int getType()
+    {
+        return this.powerUpType;
+    }
+
+    public PaddleGrow instantiatePaddleGrow(int powerUpType, BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
+    {
+        Instantiate(paddleGrow);
+        paddleGrow.setPaddleCollider(paddleCollider);
+        paddleGrow.setPaddleSpriteRend(paddleSpriteRend);
+        paddleGrow.setType(powerUpType);
+        return paddleGrow;
     }
 }

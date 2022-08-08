@@ -55,6 +55,4 @@ public class PaddleGrow : PowerUps
         this.paddleSpriteRend = paddleSpriteRend;
         this.originalSR.size = paddleSpriteRend.size;
     }
-
-    
 }

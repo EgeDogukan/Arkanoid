@@ -71,13 +71,13 @@ public class Paddle : MonoBehaviour
         this.GetComponent<Collider2D>().enabled = false;
             for (int i = 0; i < 5; i++)
            {
-                transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 200, BallMove.GetRigidbody2Dy() / 200, 0);
+                transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 250, BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition -= new Vector3(BallMove.GetRigidbody2Dx() / 200, BallMove.GetRigidbody2Dy() / 200, 0);
+                transform.localPosition -= new Vector3(BallMove.GetRigidbody2Dx() / 250, BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition += new Vector3(-BallMove.GetRigidbody2Dx() / 200, -BallMove.GetRigidbody2Dy() / 200, 0);
+                transform.localPosition += new Vector3(-BallMove.GetRigidbody2Dx() / 250, -BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition -= new Vector3(-BallMove.GetRigidbody2Dx() / 200, -BallMove.GetRigidbody2Dy() / 200, 0);
+                transform.localPosition -= new Vector3(-BallMove.GetRigidbody2Dx() / 250, -BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
            }
         this.GetComponent<Collider2D>().enabled = true;
