@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUps : MonoBehaviour
 {
     protected int powerUpType;
-    public PaddleGrow paddleGrow;
+    public Paddle paddle;
 
     public PowerUps(int powerUpType)
     {
@@ -22,12 +22,24 @@ public class PowerUps : MonoBehaviour
         return this.powerUpType;
     }
 
-    public PaddleGrow instantiatePaddleGrow(int powerUpType, BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
+    public void changeSize()
+    {
+        if(this.powerUpType == 1)
+        {
+            /*Paddle.changeBoxCollider2DSize();
+            Paddle.changePaddleSpriteSize();*/
+            /*new WaitForSeconds(10);
+            Paddle.shrinkSizeBack();*/
+            paddle.changeTransformScale();
+        }
+    }
+
+    /*public PaddleGrow instantiatePaddleGrow(int powerUpType, BoxCollider2D paddleCollider, SpriteRenderer paddleSpriteRend)
     {
         Instantiate(paddleGrow);
         paddleGrow.setPaddleCollider(paddleCollider);
         paddleGrow.setPaddleSpriteRend(paddleSpriteRend);
         paddleGrow.setType(powerUpType);
         return paddleGrow;
-    }
+    }*/
 }

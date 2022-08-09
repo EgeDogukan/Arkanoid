@@ -17,6 +17,9 @@ public class Paddle : MonoBehaviour
     public ProjectileBehaviour ProjectilePrefab;
     public Transform LaunchOffset;
     public AudioSource bounceSound;
+    private static SpriteRenderer spriteRenderer;
+    private static BoxCollider2D boxCollider2D;
+    private static Transform paddleTransform;
 
     void Start()
     {
@@ -29,6 +32,9 @@ public class Paddle : MonoBehaviour
         upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
 
         bounceSound = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        paddleTransform = GetComponent<Transform>();
     }
 
     void Update()
@@ -81,5 +87,26 @@ public class Paddle : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
            }
         this.GetComponent<Collider2D>().enabled = true;
+    }
+
+    public static void changePaddleSpriteSize()
+    {
+        spriteRenderer.size = new Vector2(spriteRenderer.size.x * 4, 0);
+    }
+    
+    public static void changeBoxCollider2DSize()
+    {
+        boxCollider2D.size = new Vector2(boxCollider2D.size.x * 4, 0);
+    }
+
+    public void changeTransformScale()
+    {
+        this.transform.localScale = new Vector3(this.transform.localScale.x * 2, this.transform.localScale.y, this.transform.localScale.z);
+    }
+
+    public static void shrinkSizeBack()
+    {
+        spriteRenderer.size = new Vector2(spriteRenderer.size.x / 2, 0);
+        boxCollider2D.size = new Vector2(boxCollider2D.size.x / 2, 0);
     }
 }

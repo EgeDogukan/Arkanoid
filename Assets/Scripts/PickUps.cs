@@ -62,7 +62,8 @@ public class PickUps : MonoBehaviour
     {
         //PrefabUtility.InstantiatePrefab(paddleGrow);
         Instantiate(powerUps);
-        PaddleGrow paddlegr  = powerUps.instantiatePaddleGrow(powerUps.getType(), this.paddleCollider, this.paddleSpriteRend);
+        powerUps.changeSize();
+        //PaddleGrow paddlegr  = powerUps.instantiatePaddleGrow(powerUps.getType(), this.paddleCollider, this.paddleSpriteRend);
         Destroy(this.gameObject);  
     }
 
