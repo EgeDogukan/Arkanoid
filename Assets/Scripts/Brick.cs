@@ -33,6 +33,7 @@ public class Brick : MonoBehaviour
         {
             ScoreSystem.addScore(this);
             CameraShaker.Instance.ShakeOnce(BallMove.GetRigidbody2DVel(), 4f, .1f, 1f);
+            brickDestroyEffect();
             Destroy(this.gameObject);
         } 
         else if(this.hitPoints == 1)
@@ -54,6 +55,7 @@ public class Brick : MonoBehaviour
     protected void brickDestroyEffect()
     {
         Vector3 effectPos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-        Instantiate(particles.gameObject, effectPos, Quaternion.identity);
+        GameObject clone = (GameObject) Instantiate(particles.gameObject, effectPos, Quaternion.identity);
+        Destroy(clone, 0.5f);
     }
 }
