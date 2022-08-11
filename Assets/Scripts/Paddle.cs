@@ -28,6 +28,7 @@ public class Paddle : MonoBehaviour
         
         leftBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         rightBorder = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+<<<<<<< HEAD
         lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
         upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
 
@@ -35,6 +36,10 @@ public class Paddle : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         paddleTransform = GetComponent<Transform>();
+=======
+        upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
+        lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
+>>>>>>> master
     }
 
     void Update()
