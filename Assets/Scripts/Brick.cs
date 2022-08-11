@@ -14,17 +14,10 @@ public class Brick : MonoBehaviour
     public ParticleSystem particles;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponentInParent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     protected void OnCollisionEnter2D(Collision2D other) 

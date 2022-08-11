@@ -18,7 +18,6 @@ public class Paddle : MonoBehaviour
     public Transform LaunchOffset;
     public AudioSource bounceSound;
 
-    // Start is called before the first frame update
     void Start()
     {
         y = this.transform.position.y;
@@ -34,7 +33,6 @@ public class Paddle : MonoBehaviour
         bounceSound = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         movePaddle();

@@ -9,18 +9,10 @@ public class GameOver : MonoBehaviour
     private BoxCollider2D gameOverWall;
     private AudioSource audioSource;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameOverWall = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
-    }
-
-    //TODO: Boş update'leri silmeliyiz. Boşu boşuna çağrılmalarını istemeyiz.
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D other) 

@@ -11,7 +11,6 @@ public class BallMove : MonoBehaviour
     static float displayTimer = 0;
     public ParticleSystem particles;
 
-    // Start is called before the first frame update
     void Start()
     {
         randVal = Random.value;
@@ -30,7 +29,6 @@ public class BallMove : MonoBehaviour
         StartCoroutine(timer());
     }
 
-    // Update is called once per frame
     void Update()
     {
         displayTimer += Time.deltaTime;
