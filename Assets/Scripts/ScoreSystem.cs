@@ -7,9 +7,13 @@ using TMPro;
 public class ScoreSystem : MonoBehaviour
 {
 
+    //TODO: make private and do not make static.
     public static int totalScore = 0;
+    //TODO: make private and use [SerializedField]
     public static TextMeshProUGUI highScore;
+    //TODO: make private and use [SerializedField]
     public static TextMeshProUGUI bestTime;
+    //TODO: make private and use [SerializedField]
     public TextMeshProUGUI textBox;
 
     // Start is called before the first frame update
@@ -23,6 +27,10 @@ public class ScoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TODO: We do not need to call displayScore in here. 
+        // https://gamedevbeginner.com/events-and-delegates-in-unity/#:~:text=Events%20in%20Unity%20are%20a,from%20within%20their%20own%20class.
+        // We can listen an event that named as onScoreChanged
+        //OR -> we can sync the score text when the addScore func is called.
         displayScore();
     }
 
