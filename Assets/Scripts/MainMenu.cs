@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     //TODO: [SerializeField] -> drag and drop the reference
     private TextMeshProUGUI bestTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         //TODO: transform.Find is costly. Use SerializedField and drag dropping instead of transform.Find.
@@ -20,12 +19,6 @@ public class MainMenu : MonoBehaviour
         bestTime = transform.Find("BestTime").GetComponent<TextMeshProUGUI>();
         displayhighScore();
         displaybestTime();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //TODO: delete empty update
     }
 
     public void playGame()

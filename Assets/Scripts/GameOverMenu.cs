@@ -12,7 +12,6 @@ public class GameOverMenu : MonoBehaviour
     TextMeshProUGUI texthighScore;
     TextMeshProUGUI bestTime;
 
-    // Start is called before the first frame update
     void Start()
     {
         textScore = GetComponentInChildren<TextMeshProUGUI>();
@@ -23,12 +22,6 @@ public class GameOverMenu : MonoBehaviour
         displayTime();
         displayhighScore();
         displaybestTime();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void playAgain()

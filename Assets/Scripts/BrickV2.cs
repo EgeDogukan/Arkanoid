@@ -21,12 +21,6 @@ public class BrickV2 : Brick
         loadData();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void loadData()
     {
         this.hitPoints = 2;

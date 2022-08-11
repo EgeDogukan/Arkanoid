@@ -8,13 +8,11 @@ public class BallBounce : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Vector3 finalVelocity;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         finalVelocity = rigidBody.velocity;

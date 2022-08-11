@@ -8,14 +8,12 @@ public class DisplayTimerInGame : MonoBehaviour
 
     public TextMeshProUGUI timerBox;
 
-    // Start is called before the first frame update
     void Start()
     {
         timerBox = GetComponent<TextMeshProUGUI>();
         displayTime();
     }
 
-    // Update is called once per frame
     void Update()
     {
         displayTime();
