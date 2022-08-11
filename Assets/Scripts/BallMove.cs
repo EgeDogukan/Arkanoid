@@ -10,6 +10,7 @@ public class BallMove : MonoBehaviour
     int seconds = 0;
     static float displayTimer = 0;
     public ParticleSystem particles;
+    public PickUps pickUps;
 
     void Start()
     {
@@ -43,6 +44,11 @@ public class BallMove : MonoBehaviour
             if(seconds % 5 == 0)
             {
                 increaseSpeed();
+                Instantiate(pickUps);
+                pickUps.setPaddleCollider(FindObjectOfType<Paddle>().GetComponent<BoxCollider2D>());
+                pickUps.setPaddleSpriteRend(FindObjectOfType<Paddle>().GetComponent<SpriteRenderer>());
+                float[] spawnSet = pickUps.spawnPickUp();
+                pickUps.setPos(spawnSet);
             }
             yield return new WaitForSecondsRealtime(3);
         }
@@ -96,6 +102,6 @@ public class BallMove : MonoBehaviour
 
     public static float GetRigidbody2DVel()
     {
-        return Mathf.Sqrt((rigidBody.velocity.x * rigidBody.velocity.x) + (rigidBody.velocity.y * rigidBody.velocity.y));
+        return Mathf.Sqrt(Mathf.Abs(rigidBody.velocity.x * rigidBody.velocity.x) + Mathf.Abs(rigidBody.velocity.y * rigidBody.velocity.y));
     }
 }

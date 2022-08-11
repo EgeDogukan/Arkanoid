@@ -15,6 +15,14 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textScore, time, texthighScore, bestTime;
 
+<<<<<<< HEAD
+    TextMeshProUGUI textScore;
+    TextMeshProUGUI time;
+    TextMeshProUGUI texthighScore;
+    TextMeshProUGUI bestTime;
+
+=======
+>>>>>>> master
     void Start()
     {
         displayScore();

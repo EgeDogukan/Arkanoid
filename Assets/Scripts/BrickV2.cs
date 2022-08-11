@@ -11,7 +11,6 @@ public class BrickV2 : Brick
     public AudioSource sound1;
     public AudioSource sound2;
     
-    // Start is called before the first frame update
     void Start()
     {
         sounds = GetComponentsInParent<AudioSource>();
