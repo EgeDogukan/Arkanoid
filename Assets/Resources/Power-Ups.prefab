@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b59462c367db7459b03a71c333d75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paddleGrow: {fileID: 7950753605189370506}
 --- !u!1 &8365745755704412773
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,3 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1004be40a7590e41a9daec931e2f819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paddleGrow: {fileID: 0}

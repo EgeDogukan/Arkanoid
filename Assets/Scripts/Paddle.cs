@@ -28,8 +28,13 @@ public class Paddle : MonoBehaviour
         
         leftBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
         rightBorder = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-        upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
-        lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
+        lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
+        upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
+
+        bounceSound = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        paddleTransform = GetComponent<Transform>();
     }
 
     void Update()
@@ -72,13 +77,13 @@ public class Paddle : MonoBehaviour
         this.GetComponent<Collider2D>().enabled = false;
             for (int i = 0; i < 5; i++)
            {
-                transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 300, BallMove.GetRigidbody2Dy() / 300, 0);
+                transform.localPosition += new Vector3(BallMove.GetRigidbody2Dx() / 250, BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition -= new Vector3(BallMove.GetRigidbody2Dx() / 300, BallMove.GetRigidbody2Dy() / 300, 0);
+                transform.localPosition -= new Vector3(BallMove.GetRigidbody2Dx() / 250, BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition += new Vector3(-BallMove.GetRigidbody2Dx() / 300, -BallMove.GetRigidbody2Dy() / 300, 0);
+                transform.localPosition += new Vector3(-BallMove.GetRigidbody2Dx() / 250, -BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
-                transform.localPosition -= new Vector3(-BallMove.GetRigidbody2Dx() / 300, -BallMove.GetRigidbody2Dy() / 300, 0);
+                transform.localPosition -= new Vector3(-BallMove.GetRigidbody2Dx() / 250, -BallMove.GetRigidbody2Dy() / 250, 0);
                 yield return new WaitForSeconds(0.01f);
            }
         this.GetComponent<Collider2D>().enabled = true;

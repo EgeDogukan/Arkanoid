@@ -8313,6 +8313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 0}
+  pickUps: {fileID: 5147041202384828068, guid: c14e44724f0b3654ca3c16267252f935, type: 3}
 --- !u!114 &1827814472
 MonoBehaviour:
   m_ObjectHideFlags: 0
