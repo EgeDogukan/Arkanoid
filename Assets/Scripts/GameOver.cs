@@ -16,6 +16,7 @@ public class GameOver : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    //TODO: Boş update'leri silmeliyiz. Boşu boşuna çağrılmalarını istemeyiz.
     // Update is called once per frame
     void Update()
     {
