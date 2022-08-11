@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Text;
 
 public class MainMenu : MonoBehaviour
 {
 
-    //TODO: [SerializeField] -> drag and drop the reference
-    private TextMeshProUGUI texthighScore;
-    //TODO: [SerializeField] -> drag and drop the reference
-    private TextMeshProUGUI bestTime;
+    [SerializeField]
+    private TextMeshProUGUI texthighScore, bestTime;
+    private StringBuilder highScoreSB = new StringBuilder("High Score: ");
+    private StringBuilder bestTimeSB = new StringBuilder("Best Time: ");
 
     void Start()
     {
-        //TODO: transform.Find is costly. Use SerializedField and drag dropping instead of transform.Find.
-        texthighScore = transform.Find("HighScore").GetComponent<TextMeshProUGUI>();
-        bestTime = transform.Find("BestTime").GetComponent<TextMeshProUGUI>();
         displayhighScore();
         displaybestTime();
     }
@@ -33,13 +31,11 @@ public class MainMenu : MonoBehaviour
 
     private void displayhighScore()
     {
-        //TODO: use string builder
-        texthighScore.text = "High Score: " + ScoreSystem.gethighScore().ToString("F0");
+        texthighScore.text = highScoreSB.Append(ScoreSystem.gethighScore().ToString("F0")).ToString();
     }
 
     private void displaybestTime()
     {
-        //TODO: use string builder
-        bestTime.text = "Best Time: " + ScoreSystem.getbestTime().ToString("F0");
+        bestTime.text = bestTimeSB.Append(ScoreSystem.getbestTime().ToString("F0")).ToString();
     }
 }

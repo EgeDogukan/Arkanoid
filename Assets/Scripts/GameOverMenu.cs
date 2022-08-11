@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Text;
 
 public class GameOverMenu : MonoBehaviour
 {
-
-    TextMeshProUGUI textScore;
-    TextMeshProUGUI time;
-    TextMeshProUGUI texthighScore;
-    TextMeshProUGUI bestTime;
+    
+    private StringBuilder displayScoreSB = new StringBuilder("Score: ");
+    private StringBuilder displayTimeSB = new StringBuilder("Time: ");
+    private StringBuilder displayhighScoreSB = new StringBuilder("High Score: ");
+    private StringBuilder displaybestTimeSB = new StringBuilder("Best Time: ");
+    [SerializeField]
+    private TextMeshProUGUI textScore, time, texthighScore, bestTime;
 
     void Start()
     {
-        textScore = GetComponentInChildren<TextMeshProUGUI>();
-        texthighScore = transform.Find("HighScore").GetComponent<TextMeshProUGUI>();
-        bestTime = transform.Find("BestTime").GetComponent<TextMeshProUGUI>();
-        time = transform.Find("Time").GetComponent<TextMeshProUGUI>();
         displayScore();
         displayTime();
         displayhighScore();
@@ -36,21 +35,21 @@ public class GameOverMenu : MonoBehaviour
 
     private void displayScore()
     {
-        textScore.text = "Score: " + ScoreSystem.getScore().ToString("F0");
+        textScore.text = displayScoreSB.Append(ScoreSystem.getScore().ToString("F0")).ToString();
     }
 
-private void displayTime()
+    private void displayTime()
     {
-        time.text = "Time: " + BallMove.getDisplayTime().ToString("F0");
+        time.text = displayTimeSB.Append(BallMove.getDisplayTime().ToString("F0")).ToString();
     }
 
     private void displayhighScore()
     {
-        texthighScore.text = "High Score: " + ScoreSystem.gethighScore().ToString("F0");
+        texthighScore.text = displayhighScoreSB.Append(ScoreSystem.gethighScore().ToString("F0")).ToString();
     }
 
     private void displaybestTime()
     {
-        bestTime.text = "Best Time: " + ScoreSystem.getbestTime().ToString("F0");
+        bestTime.text = displaybestTimeSB.Append(ScoreSystem.getbestTime().ToString("F0")).ToString();
     }
 }

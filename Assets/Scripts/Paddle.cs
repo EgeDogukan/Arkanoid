@@ -27,8 +27,6 @@ public class Paddle : MonoBehaviour
         rightBorder = cam.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
         upperBorder = cam.ViewportToWorldPoint(new Vector3(0, 0, 0)).y; //-5, +5
         lowerBorder = cam.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;             //Getting screen borders
-        Debug.Log(lowerBorder);
-        Debug.Log(upperBorder);
 
         bounceSound = GetComponent<AudioSource>();
     }
