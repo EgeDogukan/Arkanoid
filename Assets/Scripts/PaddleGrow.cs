@@ -43,4 +43,16 @@ public class PaddleGrow : PowerUps
         new WaitForSeconds(powerUpTime);
         shrinkBack();
     }
+
+    public void setPaddleCollider(BoxCollider2D paddleCollider)
+    {
+        this.paddleCollider = paddleCollider;
+        this.originalCollider.size = paddleCollider.size;
+    }
+
+    public void setPaddleSpriteRend(SpriteRenderer paddleSpriteRend)
+    {
+        this.paddleSpriteRend = paddleSpriteRend;
+        this.originalSR.size = paddleSpriteRend.size;
+    }
 }
